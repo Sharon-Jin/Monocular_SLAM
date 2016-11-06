@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     DataManager dm;
-    string directory="/Users/SK/Desktop/cmu/Monocular_SLAM/data/rgbd_dataset_freiburg1_desk2_secret";
+    string directory="./data/rgbd_dataset_freiburg1_desk2_secret";
     dm.loadImgFileList(directory, 0, 20);
 
     return 0;
