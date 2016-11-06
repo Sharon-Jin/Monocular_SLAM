@@ -1,5 +1,10 @@
 //
-// Created by 金晓晗 on 16/11/5.
+//
+// Monocular SLAM
+// Following the pipeline of ORB_SLAM with optimisation framework implemented in OPT
+//
+// Xiaohan Jin, Yifan Xing, Yu Mao @ CMU
+// 11/01/2016
 //
 
 #include "data_manager.h"
@@ -31,12 +36,11 @@ void DataManager::loadImgFileList(string directory, int begin_frame, int end_fra
         f.framename=imgNamelist[i].framename;
         f.frameID=i;
         f.frame=imread(imgNamelist[i].framename, CV_LOAD_IMAGE_UNCHANGED);
-        cout<<f.framename<<endl;
+        cout << "Frame: " << f.framename << endl;
         imshow("frame", f.frame);
         waitKey();
         frames.push_back(f);
     }
-    frames.resize(begin_frame);
     cout<<"Imagelist loaded"<<endl;
 }
 
@@ -47,14 +51,11 @@ bool has_suffix(const string& s, const string& suffix)
 
 Frame DataManager::parseImgRawFileName(string directory, string filename)
 {
-    double milli_second;
-    char side[10];
-    sscanf(filename.c_str(), "%lf.png", &milli_second);
+    double timestamp;
+    sscanf(filename.c_str(), "%lf.png", &timestamp);
     Frame f;
-    f.timestamp = milli_second;
+    f.timestamp = timestamp;
     f.framename = directory + filename;
-    //cout<<f.framename<<endl;
-    // f.frame = imread(f.framename, CV_LOAD_IMAGE_UNCHANGED);
     return f;
 }
 
