@@ -1,9 +1,14 @@
 //
-// Created by 金晓晗 on 16/11/5.
+//
+// Monocular SLAM
+// Following the pipeline of ORB_SLAM with optimisation framework implemented in OPT
+//
+// Xiaohan Jin, Yifan Xing, Yu Mao @ CMU
+// 11/01/2016
 //
 
 #include "Frame.h"
 
-void ExtractORB(int flag, const cv::Mat &im){
+void ExtractORB(int flag, const Mat &im){
 
 }
