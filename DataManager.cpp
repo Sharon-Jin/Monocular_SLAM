@@ -7,7 +7,7 @@
 // 11/01/2016
 //
 
-#include "data_manager.h"
+#include "DataManager.h"
 
 void DataManager::loadImgFileList(string directory, int begin_frame, int end_frame) {
     cout << "Loading image from : " << directory << "..." << endl;
@@ -36,7 +36,7 @@ void DataManager::loadImgFileList(string directory, int begin_frame, int end_fra
         f.framename=imgNamelist[i].framename;
         f.frameID=i;
         f.frame=imread(imgNamelist[i].framename, CV_LOAD_IMAGE_UNCHANGED);
-        cout << "Frame: " << f.framename << endl;
+        //cout << "Frame: " << f.framename << endl;
         imshow("frame", f.frame);
         waitKey();
         frames.push_back(f);

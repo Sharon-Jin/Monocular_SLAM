@@ -19,28 +19,13 @@
 #include <vector>
 #include <time.h>
 #include <dirent.h>
-
+#include "Frame.h"
 #include "opencv2/calib3d/calib3d.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
 using namespace std;
 using namespace cv;
-
-class Frame {
-public:
-    Mat frame;
-    double timestamp;
-    int frameID;
-    string framename;
-    vector<pair<Point3d, int>> current_points;
-
-    bool operator < (const Frame & frameB) const
-    {
-        return frameB.timestamp > timestamp;
-    }
-};
-
 
 class DataManager{
 public:
