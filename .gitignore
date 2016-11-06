@@ -30,3 +30,8 @@
 
 # For MAC
 .DS_Store
+
+# For Clion
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/*.iws
