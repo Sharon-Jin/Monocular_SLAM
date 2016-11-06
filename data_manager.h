@@ -1,5 +1,10 @@
 //
-// Created by 金晓晗 on 16/11/5.
+//
+// Monocular SLAM
+// Following the pipeline of ORB_SLAM with optimisation framework implemented in OPT
+//
+// Xiaohan Jin, Yifan Xing, Yu Mao @ CMU
+// 11/01/2016
 //
 
 #ifndef MONOCULAR_SLAM_DATA_MANAGER_H
